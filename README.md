@@ -14,6 +14,8 @@ then run the server:
 npm run dev
 ```
 
+using a web browser navigate to http://localhost:3000
+
 # Summary
 
 This is my submission for the following job screening:
