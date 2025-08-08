@@ -42,4 +42,3 @@ My focus was to complete the requirements within a short amount of time, while k
 I tried to organize the logic in a sensible middle ground between enterprise and MVP.
 
 I didn't get around to testing, but if I did it would of been integration testing using cherrio,jest, and supertest.
-# ohio
