@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/pico.min.css" />
+  <title>Matthew Crompton - Ohio Data Entry</title>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <hgroup>
+        <h1>Error</h1>
+      </hgroup>
+    </header>
+    <section>
+
+      <% if (code) { %>
+        <p>
+          User creation failed with error code: <%= code %>
+        </p>
+        <% } %>
+          <% if (message) { %>
+            <p>
+              <%= message %>
+            </p>
+            <% } %>
+
+
+              <a href="/">
+                <button>Back</button>
+              </a>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/pico.min.css">
+  <title>Matthew Crompton - Ohio Data Entry</title>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <hgroup>
+        <h1>Users</h1>
+      </hgroup>
+    </header>
+    <% if (isSuccess) { %>
+      <section>
+        <p>🎉 User creation successfull, Thank you.</p>
+      </section>
+      <% } %>
+
+        </section>
+        <section id="data_table">
+          <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Age</th>
+                <th>Home Town</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (users && users.length) { %>
+                <% users.forEach(user=> { %>
+                  <tr>
+                    <td>
+                      <%= user.id %>
+                    </td>
+                    <td>
+                      <%= user.name %>
+                    </td>
+                    <td>
+                      <%= user.title %>
+                    </td>
+                    <td>
+                      <%= user.age || '' %>
+                    </td>
+                    <td>
+                      <%= user.home_town || '' %>
+                    </td>
+                  </tr>
+                  <% }) %>
+                    <% } else { %>
+                      <tr>
+                        <td colspan="5">No users found</td>
+                      </tr>
+                      <% } %>
+            </tbody>
+          </table>
+          <a href="/">
+            <button>Back</button>
+          </a>
+        </section>
+  </main>
+</body>
+
+</html>
